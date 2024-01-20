@@ -8,3 +8,4 @@ urlpatterns = [
     path('trending/', trending_view, name='trending'),  # Keeps the trending URL as well
     # ... other url patterns ...
 ]
+

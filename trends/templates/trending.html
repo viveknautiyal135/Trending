@@ -1,14 +1,43 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Top Trending Wines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('{% static "images/wine_background.jpg" %}') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        }
+        h1 {
+            color: #a52a2a; /* Wine color */
+        }
+        ol {
+            list-style-position: inside;
+        }
+        li {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Top 3 Trending Wines</h1>
-    <ol>
-        {% for wine, score in trending_wines.items %}
-            <li>{{ wine }} (Score: {{ score }})</li>
-        {% endfor %}
-    </ol>
+    <div class="container">
+        <h1>Top 3 Popular Wines</h1>
+        <p>Check out the wines that are currently trending:</p>
+        <ol>
+            {% for wine, score in trending_wines.items %}
+                <li>{{ wine }} (Popularity Score: {{ score }})</li>
+            {% endfor %}
+        </ol>
+    </div>
 </body>
 </html>
