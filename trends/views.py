@@ -25,4 +25,4 @@ def trending_view(request):
         'selected_region': selected_region,
         'trending_wines': trending_wines.to_dict(),
     }
-    return render(request, 'trending.html', context)
+    return render(request, 'myapp/trending.html', context)
