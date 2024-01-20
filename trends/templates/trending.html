@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trending on Google</title>
+</head>
+<body>
+    <h1>Trending Searches</h1>
+    <ul>
+        {% for search in trending_searches %}
+            <li>{{ search.0 }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
