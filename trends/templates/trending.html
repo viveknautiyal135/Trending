@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Trending on Google</title>
+    <title>Top Trending Wines</title>
 </head>
 <body>
-    <h1>Trending Searches</h1>
-    <ul>
-        {% for search in trending_searches %}
-            <li>{{ search.0 }}</li>
+    <h1>Top 3 Trending Wines</h1>
+    <ol>
+        {% for wine, score in trending_wines.items %}
+            <li>{{ wine }} (Score: {{ score }})</li>
         {% endfor %}
-    </ul>
+    </ol>
 </body>
 </html>
